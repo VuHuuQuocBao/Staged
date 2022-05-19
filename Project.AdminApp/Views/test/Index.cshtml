@@ -1,0 +1,14 @@
+﻿@*@using Project.ViewModel.Common
+@model Class1*@
+
+<form asp-controller="Test" asp-action="Index" method="post">
+    <select @*asp-for="Country"*@@* id="abc"*@ name="abcd"  onchange="this.form.submit()"  asp-items="@ViewBag.Countries">
+     @*   @foreach(var item in @ViewBag.Countries )
+        {
+         <option value="@item.Value" selected="@item.Selected">@item.Text</option>   
+        }*@
+    </select> 
+
+     <input id="bcd" name="bcd" onchange="this.form.submit()"  />
+    <br /><button type="submit">Register</button>
+</form>
